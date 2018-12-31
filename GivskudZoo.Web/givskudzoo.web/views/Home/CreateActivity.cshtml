@@ -1,0 +1,78 @@
+﻿<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+<link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../Content/Site.css">
+@{
+	Layout = null;
+}
+
+<div id="createActivity" class="container">
+	<div>
+		<h1>ADD ACTIVITY</h1>
+		<button class="closeButton" onclick="@("window.location.href='" + @Url.Action("Schedule", "Home") + "'");">&times;</button>
+	</div>
+	<div class="row">
+		<div class="col-12"><button class="btn float-left" onclick="location.href='#'">+ Add image</button></div>
+	</div>
+
+	<form>
+		<div class="row">
+			<div class="col-12">
+				<input class="title col-12" type="text" placeholder="+ Add title">
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<textarea class="description col-12" placeholder="+ Add description"></textarea>
+			</div>
+		</div>
+
+
+		<div class="row" style="margin-top:10px;">
+			<div class="col-6">
+				<p class="text-white text-center">Date</p>
+				<input type="date" style="margin-top: 4px;">
+				<div class="flexline">
+					<input class="checkbox" type="radio" name="repeatValue" value="single"> <label for="single" class="text-white">Single</label>
+				</div>
+				<div class="flexline">
+					<input class="checkbox" type="radio" name="repeatValue" value="repeated"> <label for="repeated" class="text-white">Repeated</label>
+				</div>
+			</div>
+			<div class="col-6">
+				<p class="text-white text-center">Time</p>
+				<table style="border-spacing:5px; width:100%;">
+					<tr>
+						<td>
+							<label class="text-white time-label">From</label>
+						</td>
+						<td>
+							<input type="time">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="text-white time-label">To</label>
+						</td>
+						<td>
+							<input type="time">
+						</td>
+					</tr>
+				</table>			
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<button class="btn btn3 btnFullWidth" onclick="@("window.location.href='" + @Url.Action("Schedule", "Home") + "'");">Cancel</button>
+			</div>
+
+			<div class="col">
+				<button class="btn btn2 btnFullWidth" onclick="@("window.location.href='" + @Url.Action("Schedule", "Home") + "'");">Publish</button>
+			</div>
+		</div>
+
+	</form>
+</div>
+

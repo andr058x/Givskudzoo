@@ -1,0 +1,7 @@
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Release\GivskudZoo.Model.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Release\GivskudZoo.Model.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Release\Newtonsoft.Json.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Release\Newtonsoft.Json.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\obj\Release\GivskudZoo.Model.csprojResolveAssemblyReference.cache
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\obj\Release\GivskudZoo.Model.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\obj\Release\GivskudZoo.Model.pdb

@@ -1,0 +1,77 @@
+﻿@model GivskudZoo.Web.Models.EventsDetailsModel
+@{
+	ViewBag.Title = "EventDetails";
+	Layout = null;
+}
+<!--Madde-->
+<title>Event Details</title>
+<body>
+<div class="modal-header no-border">
+    <h4 class="modal-title" id="myModalLabel">Event Details</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <label>Author</label>
+        </div>
+        <div class="col-6">
+            <span>@Model.Author</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Creation date</label>
+        </div>
+        <div class="col-6">
+            <span>@Model.CreationDate.ToString("g")</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Last update</label>
+        </div>
+        <div class="col-6">
+            <span>@Model.LastUpdateDate.ToString("g")</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Title</label>
+        </div>
+        <div class="col-6">
+            <span>@Model.Title</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Short Desc</label>
+        </div>
+        <div class="col-6">
+            <span>@Model.ShortDescription</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Description</label>
+        </div>
+        <div class="col-6">
+            <span>@Model.Description</span>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+
+
+
+

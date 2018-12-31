@@ -1,0 +1,78 @@
+﻿@model GivskudZoo.Model.ComplexFilterDto
+@{
+	ViewBag.Title = "FilterBox";
+	Layout = null;
+}
+<!--Madde-->
+<title>Filter box</title>
+<body>
+<div class="modal-header no-border">
+    <h4 class="modal-title" id="myModalLabel">Filter box</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+
+<div class="container">
+    @using (Html.BeginForm("Index", "Events", FormMethod.Post,
+                                            new { @id = "filtersForm" }))
+    {
+        <div class="row mb-2">
+            <div class="col-6">
+                <label>Serach</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control form-control-sm w-75" type="text" style="background-color: white"
+                       placeholder="Search" name="Query" aria-label="Search">
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-6">
+                <label>Search in</label>
+            </div>
+            <div class="col-6">
+                <select class="select" name="Field">
+                    <option value="1">Title</option>
+                    <option value="2">Short description</option>
+                    <option value="3">Description</option>
+                    <option value="4">Author</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-6">
+                <label>OrderBy</label>
+            </div>
+            <div class="col-6">
+                <select class="select" name="OrderByField">
+                    <option value="1">Title</option>
+                    <option value="2">Creation date</option>
+                    <option value="3">Last Update date</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-6">
+                <label>Order by descending</label>
+            </div>
+            <div class="col-6">
+                @Html.CheckBoxFor(m => m.OrderByDescending)
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input type="submit" value="Filter" class="btn btn2 btnFullWidth" />
+            </div>
+        </div>
+    }
+</div>
+
+</body>
+
+
+
+
+
+

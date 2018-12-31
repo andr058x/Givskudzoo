@@ -1,0 +1,22 @@
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\GivskudZoo.Dal.dll.config
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\GivskudZoo.Dal.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\GivskudZoo.Dal.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.csprojResolveAssemblyReference.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\GivskudZoo.Dal.dll.config
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\GivskudZoo.Dal.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\GivskudZoo.Dal.pdb
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.csproj.CopyComplete
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Dal\obj\Debug\GivskudZoo.Dal.pdb

@@ -1,0 +1,267 @@
+﻿@model IEnumerable<GivskudZoo.Model.NewsDto>
+
+<div class="containerand">
+
+    <div class="topnav">
+        @using (Html.BeginForm("Index", "News", FormMethod.Get,
+            new {@class = "form-inline col-12 ml-2", @id = "searchForm"}))
+        {
+            <input class="form-control form-control-sm w-75 ml-4 mr-3" type="text" style="background-color: white"
+                   placeholder="Search in title/short desc." name="Query"
+                   aria-label="Search">
+            <a onclick="document.getElementById('searchForm').submit()"><i class="fas fa-search" aria-hidden="true"></i></a>
+        }
+    </div>
+</div>
+<div class="rowbuttons">
+    <div>
+        <button class="btn btn-default margininline mt-2" id="filterModal" href="javascript:void(0);">
+            <i class="fa fa-filter mr-1"></i>Filters
+        </button>
+    </div>
+    <div>
+        @using (Html.BeginForm("Index", "News", FormMethod.Get,
+                    new { @id = "orderByForm" }))
+        {
+            <p class="sort">Sort by</p>
+            <select class="select" onchange="document.getElementById('orderByForm').submit()" id="orderByFieldSelect" 
+                    name="OrderByField">
+                <option value="2">Creation date</option>
+                <option value="3">Last Update</option>
+                <option value="1">Title</option>
+            </select>
+        }
+    </div>
+    <div></div>
+    <div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <button class="btn btn-default btn2 float-right mt-2" id="addNews" href="javascript:void(0);"
+                style="margin-right: 10px;"><i class="fa fa-plus"></i> Add News </button>
+    }  
+    </div>
+</div>
+
+
+<div class="news-list">
+    @if (ViewBag.Filter != null)
+    {
+        if (!string.IsNullOrEmpty(ViewBag.Filter.Query))
+        {
+            <span>Searched: "@ViewBag.Filter.Query"</span>
+        }
+        if (ViewBag.Filter.FieldInt != 0)
+        {
+            <span> in: "@ViewBag.Filter.Field"</span>
+        }
+        if (ViewBag.Filter.OrderByFieldInt != 0)
+        {
+            <span>Order by: "@ViewBag.Filter.OrderByField"</span>
+        }
+        if (ViewBag.Filter.OrderByDescending != null)
+        {
+            if (ViewBag.Filter.OrderByDescending == true)
+            {
+                <span>Desc.</span>
+            }
+            else
+            {
+                <span>Asc.</span>
+            }
+        }
+    }
+    @foreach (var el in @Model)
+    {
+        <div class="rowbuttons">
+            <div class="col-4 news-line">
+                <img class="img_news_css" src="@el.Image.ImageUrl"/>
+            </div>
+            <div class="col-4 news-line">
+                <h4 class="news-header">@el.Title</h4>
+                <p class="desc">@el.ShortDescription</p>
+            </div>
+
+            <div class="col-4 news-line">
+                <h6 class="author">By: @el.Author</h6>
+                <row>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="buttons">
+                            <a class="btn-sm small-edit-btn buttoncolor mr-1 detailsNews" data-selector="@el.Id">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a class="btn-sm small-edit-btn buttoncolor mr-1 editNews" data-selector="@el.Id">
+                                <i class="fa fa-pencil-alt"></i>
+                            </a>
+                            <a class="btn-sm small-edit-btn buttoncolor" onclick="return confirm('Are you sure you want to Delete?')"
+                               href="@Url.Action("Delete", "News", new {id = el.Id})">
+                                <i class="fa fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    }
+                </row>
+            </div>
+        </div>
+    }
+
+    @if (Model == null || !Model.Any())
+    {
+        <span class="ml-3">Couldn't find anymore News</span>
+    }
+
+    <div id='eventsModal' class='modal'>
+        <div class="modal-dialog">
+            <div class="modal-content containerand">
+                <div id='eventsModalContent'></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        //debugger;
+        if (@ViewBag.Filter.OrderByFieldInt == 0)
+            return;
+
+        $("#orderByFieldSelect").val(@ViewBag.Filter.OrderByFieldInt);
+    });
+
+    $(function () {
+        $(".detailsNews").click(function () {
+            //debugger;
+            var options = { "backdrop": "static", keyboard: true };
+            var selector = $(this).data('selector');
+            $.ajax({
+                type: "GET",
+                url: '/News/Details/' + selector,
+                contentType: "application/json; charset=utf-8",
+                datatype: "json",
+                success: function (data) {
+                    $('#eventsModalContent').html(data);
+                    $('#eventsModal').modal(options);
+                    $('#eventsModal').modal('show');
+                },
+                error: function () {
+                    alert("Dynamic content load failed.");
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#filterModal").click(function () {
+            //debugger;
+            var options = { "backdrop": "static", keyboard: true };
+            $.ajax({
+                type: "GET",
+                url: '/News/Filter',
+                contentType: "application/json; charset=utf-8",
+                datatype: "json",
+                success: function (data) {
+                    $('#eventsModalContent').html(data);
+                    $('#eventsModal').modal(options);
+                    $('#eventsModal').modal('show');
+                },
+                error: function () {
+                    alert("Dynamic content load failed.");
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#addNews").click(function () {
+            //debugger;
+            var options = { "backdrop": "static", keyboard: true };
+            $.ajax({
+                type: "GET",
+                url: '/News/Create',
+                contentType: "application/json; charset=utf-8",
+                datatype: "json",
+                success: function (data) {
+                    $('#eventsModalContent').html(data);
+                    $('#eventsModal').modal(options);
+                    $('#eventsModal').modal('show');
+                },
+                error: function () {
+                    alert("Dynamic content load failed.");
+                }
+            });
+        });
+    });
+
+    $(function() {
+        $(".editNews").click(function() {
+            //debugger;
+            var options = { "backdrop": "static", keyboard: true };
+            var selector = $(this).data('selector');
+            $.ajax({
+                type: "GET",
+                url: '/News/Edit/' + selector,
+                contentType: "application/json; charset=utf-8",
+                datatype: "json",
+                success: function(data) {
+                    $('#eventsModalContent').html(data);
+                    $('#eventsModal').modal(options);
+                    $('#eventsModal').modal('show');
+                },
+                error: function() {
+                    alert("Dynamic content load failed.");
+                }
+            });
+        });
+    });
+
+    $("#closbtn").click(function () {
+        $('#eventsModal').modal('hide');
+    });
+
+    //$(document).ready(function () {
+    //});
+    //function deleteActivity(ele) {
+    //    swal({
+    //        title: 'Are you sure?',
+    //        text: "You won't be able to revert this!",
+    //        type: 'warning',
+    //        showCancelButton: true,
+    //        confirmButtonColor: '#3085d6',
+    //        cancelButtonColor: '#d33',
+    //        confirmButtonText: 'Yes, delete activity!',
+    //        cancelButtonText: 'Cancel'
+    //    }).then((result) => {
+    //        if (result.value) {
+    //            swal({
+    //                title: 'Deleted!',
+    //                text: 'The activity has been deleted.',
+    //                type: 'success',
+    //                showCancelButton: false,
+    //                showCloseButton: false,
+    //                timer: 1500
+    //            })
+    //            $(ele).parents(".activity").remove();
+    //        }
+    //    })
+
+    //}
+    //function closeAllExpanded() {
+    //    var activityExpanded = $(".activity-expanded");
+    //    var activityClosed = $(".activity-closed.hidden");
+    //    $(activityExpanded).addClass("hidden");
+    //    $(activityClosed).removeClass("hidden");
+    //}
+    //function openExpanded(ele) {
+    //    closeAllExpanded();
+    //    var parent = $(ele).parent();
+    //    var activityExpanded = $(parent).find(".activity-expanded");
+    //    $(ele).addClass("hidden");
+    //    $(activityExpanded).removeClass("hidden");
+    //}
+    //function closeExpanded(ele) {
+    //    var parent = $(ele).parent();
+    //    var activityClosed = $(parent).find(".activity-closed");
+    //    $(ele).addClass("hidden");
+    //    $(activityClosed).removeClass("hidden");
+    //}
+</script>

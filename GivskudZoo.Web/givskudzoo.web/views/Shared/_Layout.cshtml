@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Givskud zoo</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/Content/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../content/Site.css">
+    <script src="~/Content/fontawesome-free-5.5.0-web/js/all.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>  //Layout 
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<div id="main">
+    <div style="width: 100%">
+        @RenderBody()
+    </div>
+    <nav>
+        <ul>
+            <li class="li38 @(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")">
+                <a href="@Url.Action("Index", "Home")"><span class="fas fa-home" aria-hidden="true"></span></a>
+            </li>
+            <li class="liflex @(ViewContext.RouteData.Values["Controller"].ToString() == "News" ? "active" : "")">
+                <a href="@Url.Action("Index", "News")">News</a>
+            </li>
+            <li class="liflex @(ViewContext.RouteData.Values["Controller"].ToString() == "Events" ? "active" : "")">
+                <a href="@Url.Action("Index", "Events")">Events</a>
+            </li>
+            <li class="liflex @(ViewContext.RouteData.Values["Controller"].ToString() == "Activity" ? "active" : "")">
+                <a href="@Url.Action("Index", "Activity")">Activity</a>
+            </li>
+            <li class="li38"><a href="javascript:void(0);" id="loginBtn">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <span class="fas fa-sign-out-alt" aria-hidden="true"></span>
+                } 
+                else
+                {
+                    <span class="fas fa-user" aria-hidden="true"></span>
+                }
+            </a></li>
+        </ul>
+    </nav>
+    <div class="50space"></div>
+    <div id='loginModal' class='modal'>
+        <div class="modal-dialog">
+            <div class="modal-content containerand">
+                <div id='loginModalContent'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    $(function() {
+        $("#loginBtn").click(function () {
+            var $buttonClicked = $(this);
+            var id = $buttonClicked.attr('data-id');
+            var options = { "backdrop": "static", keyboard: true };
+            $.ajax({
+                type: "GET",
+                url: '/User/Login',
+                contentType: "application/json; charset=utf-8",
+                data: { "Id": id },
+                datatype: "json",
+                success: function (data) {
+                    $('#loginModalContent').html(data);
+                    $('#loginModal').modal(options);
+                    $('#loginModal').modal('show');
+                },
+                error: function() {
+                    alert("Dynamic content load failed.");
+                }
+            });
+        });
+
+        $("#closbtn").click(function() {
+            $('#loginModal').modal('hide');
+        });
+    });
+</script>

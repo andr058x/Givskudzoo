@@ -1,0 +1,16 @@
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\GivskudZoo.Model.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\GivskudZoo.Model.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.csprojResolveAssemblyReference.cache
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\GivskudZoo.Model.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\GivskudZoo.Model.pdb
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.csproj.CopyComplete
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Model\obj\Debug\GivskudZoo.Model.pdb

@@ -1,0 +1,34 @@
+/*Light green*/
+/*Medium green*/
+#map {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute; }
+  #map .logo-link {
+    display: block;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    padding: 10px; }
+  #map .logo {
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 100px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px; }
+  #map #map-zoo {
+    width: 100%;
+    background-image: url("/Images/map.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 56px);
+    height: 100vh;
+    min-height: 100px;
+    min-width: 100px; }
+
+/*# sourceMappingURL=Map.css.map */

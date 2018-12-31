@@ -1,0 +1,45 @@
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Bll.dll.config
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Bll.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Bll.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\AutoMapper.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Dal.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\System.ValueTuple.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Dal.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\AutoMapper.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\AutoMapper.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\System.ValueTuple.xml
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.csprojResolveAssemblyReference.cache
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Model.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Model.pdb
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lorenzo Bonazzi\Documents\Visual Studio 2015\Projects\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Bll.dll.config
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Bll.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Bll.pdb
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\AutoMapper.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Dal.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Model.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\System.ValueTuple.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Dal.pdb
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Dal.dll.config
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\GivskudZoo.Model.pdb
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\AutoMapper.pdb
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\AutoMapper.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\System.ValueTuple.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\bin\Debug\Newtonsoft.Json.xml
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.csproj.CopyComplete
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.dll
+C:\Users\andre\Desktop\Nuova cartella (2)\GivskudZoo.Web\GivskudZoo.Bll\obj\Debug\GivskudZoo.Bll.pdb

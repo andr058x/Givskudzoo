@@ -1,0 +1,85 @@
+﻿@model GivskudZoo.Web.Models.EventsModelInput
+@{
+	ViewBag.Title = "CreateEvent";
+	Layout = null;
+}
+<!--Madde-->
+<title>Create event</title>
+<body>
+<div class="modal-header no-border">
+    <h4 class="modal-title" id="myModalLabel">Add Event</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+
+<div class="container">
+    @*@Html.AntiForgeryToken()*@
+
+    @using (Ajax.BeginForm("Create", "Events", null, new AjaxOptions
+    {
+        HttpMethod = "POST", OnSuccess = "OnSuccess", OnFailure = "OnFailure", OnBegin = "OnBegin", OnComplete = "OnComplete"
+    },
+        new { enctype = "multipart/form-data" }))
+    {
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFileAdd" name="ImageFile"  style="display:none">
+            <label class="custom-file-label" for="customFileAdd" id="customFileLabelAdd">Choose file</label>
+        </div>
+
+        <input class="title" type="text" name="Title" placeholder="+ Add title"><br>
+        <textarea class="shortDescription" name="ShortDescription" placeholder="+ Add teaser description"></textarea> <br>
+        <textarea class="description" name="Description" placeholder="+ Add description"></textarea> <br>
+
+        <span id="message"></span>
+
+        <div class="space"></div>
+
+        <div class="row">
+            <div class="col">
+                <button type="submit" id="btnSubmit" class="btn btn2 btnFullWidth">Publish</button>
+            </div>
+        </div>
+    }
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+    $(function() {
+        $('#customFileAdd').on('change', function () {
+            var fileName = $(this).val();
+            $(this).next('#customFileLabelAdd').addClass("selected").html(fileName);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#customFileAdd").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    function OnSuccess(data) {
+        if (data.Success) {
+            location.reload();
+        } else {
+            $("#message").html(data.Error);
+        }
+    }
+
+    function OnFailure(data) {
+        console.error(data);
+    }
+
+    function OnBegin(data) {
+        $("#message").html("Saving item...");
+    }
+
+    function OnComplete(data) {
+    }
+</script>
+
+
+
+
+
+

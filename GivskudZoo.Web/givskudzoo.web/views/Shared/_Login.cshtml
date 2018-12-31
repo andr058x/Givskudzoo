@@ -1,0 +1,121 @@
+﻿@model GivskudZoo.Web.Models.UserModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<!--Madde-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+<link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../Content/Site.css">
+
+<title>Login</title>
+<body>
+<div class="modal-header no-border">
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+    }
+    else
+    {
+        <h4 class="modal-title" id="myModalLabel">Hi, @User.Identity.Name.ToUpper()</h4>
+    }
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+
+<div class="container">
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <div>
+        @Html.AntiForgeryToken()
+
+        @Html.TextBoxFor(m => m.UserName, new {@class = "title", @placeHolder = "Username"})
+        @Html.PasswordFor(m => m.Password, new {@class = "title", @placeHolder = "Password"})
+        @Html.CheckBoxFor(m => m.RememberMe, new {@class = "title"})
+        <label class="ml-3">@Html.DisplayNameFor(m => m.RememberMe)</label><br>
+
+        <span id="message"></span>
+
+        <div class="space"></div>
+
+        <div class="row">
+            <div class="col">
+                <input type="button" id="loginSubmit" value="Submit" class="btn btn2 btnFullWidth"/>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <span id="message"></span>
+
+    <div class="row">
+        <div class="col">
+            <input type="button" id="logoutSubmit" value="Logout" class="btn btn2 btnFullWidth" />
+        </div>
+    </div>
+}
+</div>
+
+</body>
+
+<script>
+    $(function() {
+        $("#loginSubmit").click(function () {
+            $("#message").html("Logging in...");
+
+            var data = {
+                UserName: $('input[name=UserName]').val(),
+                Password: $('input[name=Password]').val(),
+                RememberMe: $('input[name=RememberMe]').is(":checked")
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '/User/Login',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data),
+                datatype: "json",
+                success: function (data) {
+                    if (data.Success) {
+                        location.reload();
+                    } else {
+                        $("#message").html(data.Error);
+                    }
+                },
+                error: function() {
+                    $("#message").html("Error while authenticating user credentials!");
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#logoutSubmit").click(function () {
+            $("#message").html("Logging out...");
+
+            $.ajax({
+                type: "POST",
+                url: '/User/Logout',
+                contentType: "application/json; charset=utf-8",
+                datatype: "json",
+                success: function (data) {
+                    if (data) {
+                        location.reload();
+                    }
+                },
+                error: function () {
+                    $("#message").html("Error while logout user!");
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+

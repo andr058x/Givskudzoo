@@ -1,0 +1,85 @@
+﻿@model GivskudZoo.Web.Models.NewsModelOutput
+@{
+	ViewBag.Title = "EditNews";
+	Layout = null;
+}
+<!--Madde-->
+<title>Edit news</title>
+<body>
+<div class="modal-header no-border">
+    <h4 class="modal-title" id="myModalLabel">Edit News</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+
+<div class="container">
+    @*@Html.AntiForgeryToken()*@
+
+    @using (Ajax.BeginForm("Edit", "News", new { id = @Model.Id }, new AjaxOptions
+    {
+        HttpMethod = "PUT", OnSuccess = "OnSuccess", OnFailure = "OnFailure", OnBegin = "OnBegin", OnComplete = "OnComplete"
+    },
+        new { enctype = "multipart/form-data" }))
+    {
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFileEdit" name="ImageFile" style="display:none">
+            <label class="custom-file-label" for="customFileEdit" id="customFileLabelEdit">@Model.FileName</label>
+        </div>
+
+        <input class="title" type="text" name="Title" placeholder="+ Add title" value="@Model.Title"><br>
+        <textarea class="shortDescription" name="ShortDescription" placeholder="+ Add teaser description" >@Model.ShortDescription</textarea> <br>
+        <textarea class="description" name="Description" placeholder="+ Add description">@Model.Description</textarea> <br>
+
+        <span id="message"></span>
+
+        <div class="space"></div>
+
+        <div class="row">
+            <div class="col">
+                <button type="submit" id="btnSubmit" class="btn btn2 btnFullWidth">Edit</button>
+            </div>
+        </div>
+    }
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+    $(function() {
+        $('#customFileEdit').on('change', function () {
+            var fileName = $(this).val();
+            $(this).next('#customFileLabelEdit').addClass("selected").html(fileName);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#customFileEdit").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    function OnSuccess(data) {
+        if (data.Success) {
+            location.reload();
+        } else {
+            $("#message").html(data.Error);
+        }
+    }
+
+    function OnFailure(data) {
+        console.error(data);
+    }
+
+    function OnBegin(data) {
+        $("#message").html("Saving item...");
+    }
+
+    function OnComplete(data) {
+    }
+</script>
+
+
+
+
+
+

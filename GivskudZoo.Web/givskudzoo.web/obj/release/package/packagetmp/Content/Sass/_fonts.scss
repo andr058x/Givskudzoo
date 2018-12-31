@@ -1,0 +1,34 @@
+﻿@import "_variables.scss";
+$header-font: 'Roboto', sans-serif;
+$text-font: 'Raleway', sans-serif;
+
+
+
+h1, h2 {
+    font-family: $header-font;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0 15px 0;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+
+p {
+    font-family: $text-font;
+    color: $black;
+}
+
+p.white {
+    font-family: $text-font;
+    color: white;
+    margin: 10px 0;
+}

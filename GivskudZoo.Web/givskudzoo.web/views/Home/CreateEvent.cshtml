@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "CreateEvents";
+    Layout = null;
+
+}
+<!--Madde-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+<link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../Content/Site.css">
+<title>Create event</title>
+<body>
+    <div>
+        <h1>Add event</h1>
+
+        <input value="&times;" class="closeButton addWidth" onclick="@("window.location.href='" + @Url.Action("Events", "Home") + "'");" />
+    </div>
+    <div class="container">
+
+        <button class="btn float-left" onclick="location.href='#'">+ Add image</button>
+
+        <form>
+            <input class="title" type="text" placeholder="+ Add title"><br>
+            <textarea class="description" placeholder="+ Add description"></textarea> <br>
+
+            <div class="row">
+                <div class="col">
+                    <p class="white">From:</p>
+                </div>
+                <div class="col">
+                    <input class="date" type="datetime-local" placeholder="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="white">To:</p>
+                </div>
+                <div class="col">
+                    <input class="date" type="datetime-local" placeholder="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2>Activities for the event</h2>
+                    <button class="btn float-left" onclick="location.href='#'">+ Add activity</button>
+                </div>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="row">
+                <div class="col">
+                    <input value="Cancel" class="btn btn3 btnFullWidth" onclick="@("window.location.href='" + @Url.Action("Events", "Home") + "'");" />
+                </div>
+
+                <div class="col">
+                    <input value="Publish" class="btn btn2 btnFullWidth" onclick="@("window.location.href='" + @Url.Action("Events", "Home") + "'");" />
+                </div>
+            </div>
+            
+        </form>
+
+    </div>
+</body>

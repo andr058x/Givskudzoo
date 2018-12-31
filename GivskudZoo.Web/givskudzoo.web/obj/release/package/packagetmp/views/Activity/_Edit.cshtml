@@ -1,0 +1,134 @@
+﻿@model GivskudZoo.Web.Models.ActivityModelOutput
+@{
+	ViewBag.Title = "EditEvent";
+	Layout = null;
+}
+<!--Madde-->
+<title>Edit event</title>
+<body>
+<div class="modal-header no-border">
+    <h4 class="modal-title" id="myModalLabel">Edit Event</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+</div>
+
+<div class="container">
+    @*@Html.AntiForgeryToken()*@
+
+    @using (Ajax.BeginForm("Edit", "Activity", new { id = @Model.Id }, new AjaxOptions
+    {
+        HttpMethod = "PUT",
+        OnSuccess = "OnSuccess",
+        OnFailure = "OnFailure",
+        OnBegin = "OnBegin",
+        OnComplete = "OnComplete"
+    }))
+    {
+        <input class="title" type="text" name="Title" placeholder="+ Add title" value="@Model.Title" /><br>
+        <input class="title" name="Location" placeholder="+ Add location description" value="@Model.Location"/>
+        <br>
+        <textarea class="description" name="Description" placeholder="+ Add description" >@Model.Description</textarea>
+        <br>
+        <div class="row mt-2">
+            <div class="col-6">
+                <label>Day of activity</label>
+            </div>
+            <div class="col-6">
+                <input data-provide="datepicker" name="Date" value="@Model.Date.ToString("yyyy-MMMM-dd")" id="datetimepickerEdit" />
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-6">
+                <label>Begin time</label>
+            </div>
+            <div class="col-6">
+                <input type="number" name="BeginHour" min="0" max="23" value="@Model.BeginHour"
+                       class="w-25 hour" /> :
+                <input type="number" name="BeginMin" min="0" max="59" value="@Model.BeginMin"
+                       class="w-25 min" />
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-6">
+                <label>End time</label>
+            </div>
+            <div class="col-6">
+                <input type="number" name="EndHour" min="0" max="23" value="@Model.EndHour"
+                       class="w-25 hour"/> :
+                <input type="number" name="EndMin" min="0" max="59" value="@Model.EndMin"
+                       class="w-25 min"/>
+            </div>
+        </div>
+
+        <span id="message"></span>
+
+        <div class="space"></div>
+
+        <div class="row">
+            <div class="col">
+                <button type="submit" id="btnSubmit" class="btn btn2 btnFullWidth">Edit</button>
+            </div>
+        </div>
+    }
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#datetimepickerEdit').datepicker({
+            format: 'yyyy-MM-dd'
+        });
+    });
+    $(function () {
+        $(".hour").keydown(function () {
+            // Save old value.
+            if (!$(this).val() || (parseInt($(this).val()) <= 23 && parseInt($(this).val()) >= 0))
+                $(this).data("old", $(this).val());
+        });
+        $(".hour").keyup(function () {
+            // Check correct, else revert back to old value.
+            if (!$(this).val() || (parseInt($(this).val()) <= 23 && parseInt($(this).val()) >= 0))
+                ;
+            else
+                $(this).val($(this).data("old"));
+        });
+        $(".min").keydown(function () {
+            // Save old value.
+            if (!$(this).val() || (parseInt($(this).val()) <= 59 && parseInt($(this).val()) >= 0))
+                $(this).data("old", $(this).val());
+        });
+        $(".min").keyup(function () {
+            // Check correct, else revert back to old value.
+            if (!$(this).val() || (parseInt($(this).val()) <= 59 && parseInt($(this).val()) >= 0))
+                ;
+            else
+                $(this).val($(this).data("old"));
+        });
+    });
+
+    function OnSuccess(data) {
+        if (data.Success) {
+            location.reload();
+        } else {
+            $("#message").html(data.Error);
+        }
+    }
+
+    function OnFailure(data) {
+        console.error(data);
+    }
+
+    function OnBegin(data) {
+        $("#message").html("Saving item...");
+    }
+
+    function OnComplete(data) {
+    }
+</script>
+
+
+
+
+
+
